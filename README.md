@@ -93,5 +93,5 @@ We visualize below matches obtained with FMnet on two shapes of different subjec
 
 and our Unsupervised Learning approach yields better results:
 
-![](https://github.com/JM-data/Unsupervised_FMnet/blob/master/Images/OursAll.png | width=400 "Our Unsupervised Learning" )
+![](https://github.com/JM-data/Unsupervised_FMnet/blob/master/Images/OursAll.png | width=400)
 

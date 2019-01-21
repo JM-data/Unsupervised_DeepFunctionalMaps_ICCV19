@@ -79,19 +79,19 @@ This is what our working directory looks like:
 
 We even show great generalization upon triangle meshes that are less regular than the original triangle meshes found in FAUST or SCAPE dataset. We insist on the difference in triangulations with the following two images:
 
-![alt-text](https://github.com/JM-data/Unsupervised_FMnet/blob/master/Images/original_faust_example-1.png "width = 600")
+![alt-text](https://github.com/JM-data/Unsupervised_FMnet/blob/master/Images/original_faust_example-1.png  "Original FAUST" | width = "600")
 
 Above is a visualization of the original FAUST shapes, with 6890 vertices. Below shows a remeshed version with only 5000 vertices, less symmetric and more dense when curbature is higher:
 
-![alt-text](https://github.com/JM-data/Unsupervised_FMnet/blob/master/Images/remesh_faust_example-1.png "width = 600")
+![alt-text](https://github.com/JM-data/Unsupervised_FMnet/blob/master/Images/remesh_faust_example-1.png "Remeshed FAUST"| width = "600")
 
 
 We visualize below matches obtained with FMnet on two shapes of different subjects and in different poses: 
 
-![alt-text](https://github.com/JM-data/Unsupervised_FMnet/blob/master/Images/FMnet.png "width = 400")
+![alt-text](https://github.com/JM-data/Unsupervised_FMnet/blob/master/Images/FMnet.png "FMnet" | width = "400")
 
 
-and our Unsupervised Learning approach yields better resutls:
+and our Unsupervised Learning approach yields better results:
 
-![alt-text](https://github.com/JM-data/Unsupervised_FMnet/blob/master/Images/OursAll.png "width = 400")
+![alt-text](https://github.com/JM-data/Unsupervised_FMnet/blob/master/Images/OursAll.png "Our Unsupervised Learning" | width = "400")
 

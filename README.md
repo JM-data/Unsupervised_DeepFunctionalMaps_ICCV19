@@ -10,13 +10,14 @@ You can find our paper explaining more details of the implementation here : http
 
 <figure>
   <img src="https://github.com/JM-data/Unsupervised_FMnet/blob/master/Images/Compare_SCAPE_1.png" alt=".." title="Texture Tranfer between two FAUST shapes" />
+
 </figure>
 
 We even show great generalization upon triangle meshes that are less regular than the original triangle meshes found in FAUST or SCAPE dataset:
 
 <p float="left">
-  <img src="https://github.com/JM-data/Unsupervised_FMnet/blob/master/Images/original_faust_example.pdf" width="100" />
-  <img src="https://github.com/JM-data/Unsupervised_FMnet/blob/master/Images/remesh_faust_example.pdf" width="100" /> 
+  <img src="https://github.com/JM-data/Unsupervised_FMnet/blob/master/Images/original_faust_example-1.png" width="100" />
+  <img src="https://github.com/JM-data/Unsupervised_FMnet/blob/master/Images/remesh_faust_example-1.png" width="100" /> 
 </p>
 
 ### Installation

@@ -7,6 +7,13 @@ We therefore innovate by considering functional maps not only going from the sou
 
 You can find our paper explaining more details of the implementation here : https://arxiv.org/pdf/1812.03794.pdf
 
+
+![alt text](https://github.com/JM-data/Unsupervised_FMnet/blob/master/Images/Compare_SCAPE_1.png)
+
+We even show great generalization upon triangle meshes that are less regular than the original triangle meshes found in FAUST or SCAPE dataset: 
+
+![alt-text-1](https://github.com/JM-data/Unsupervised_FMnet/blob/master/Images/original_faust_example.pdf "Original") ![alt-text-2](https://github.com/JM-data/Unsupervised_FMnet/blob/master/Images/remesh_faust_example.pdf "Remeshed")
+
 ### Installation
 
 Install <a href="https://www.tensorflow.org/install/">TensorFlow</a>. The code is tested under TF1.6 GPU version and Python 3.6 on Ubuntu 16.04, with CUDA 9.0 and cuDNN 7. There are also some dependencies for a few Python libraries for data like `numpy`, `scipy` etc.
@@ -24,6 +31,8 @@ To obtain matches after training for a given set of shapes:
 Visualization of functional maps at each training step is possible with tensorboard:
 
         tensorboard --logdir=./Training/
+
+![alt-text-1](https://github.com/JM-data/Unsupervised_FMnet/blob/master/Images/FMnet.png "FMnet") ![alt-text-2](https://github.com/JM-data/Unsupervised_FMnet/blob/master/Images/OursAll.png "Our unsupervised approach")
 
 ### Visualization Tools
 We will include Matlab code to visualize matches and calculate their geodesic error soon.

@@ -49,7 +49,8 @@ We notice a few tips that can make the learning experience more comfortable :
 * If RAM permits, increasing the percentage of descriptors randomly chosen at each training step can yield better results. However, we were satisfied by only chosing 20%, or less, first for speed reasons but second because the randomness in this choice reminded us of a pooling step. This could add robustness to our model.
 * If you have an OOM error with tensorflow, reduce the batch_size and/or number of vertices chosen on the shapes and/or use less descriptors.
 * Be sure to check your directories and make it similar with the code! Think about the shape names, shape directory, training directory, are the shapes numbered on 3 digits or just two (i.e. Shape1 and not Shape01) etc...
-* This is what our working directory looks like:
+
+This is what our working directory looks like:
 
 ```bash
 ├── DFMnet.py
@@ -75,15 +76,17 @@ We notice a few tips that can make the learning experience more comfortable :
 ```
 
 
-We even show great generalization upon triangle meshes that are less regular than the original triangle meshes found in FAUST or SCAPE dataset:
-
+We even show great generalization upon triangle meshes that are less regular than the original triangle meshes found in FAUST or SCAPE dataset. We insist on the difference in triangulations with the following two images:
 
 ![alt-text](https://github.com/JM-data/Unsupervised_FMnet/blob/master/Images/original_faust_example-1.png "width = 600")
+
+Above is a visualization of the original FAUST shapes, with 6890 vertices. Below shows a remeshed version with only 5000 vertices, less symmetric:
 
 ![alt-text](https://github.com/JM-data/Unsupervised_FMnet/blob/master/Images/remesh_faust_example-1.png "width = 600")
 
 
 ![alt-text](https://github.com/JM-data/Unsupervised_FMnet/blob/master/Images/FMnet.png "width = 600")
+
 
 ![alt-text](https://github.com/JM-data/Unsupervised_FMnet/blob/master/Images/OursAll.png "width = 600")
 

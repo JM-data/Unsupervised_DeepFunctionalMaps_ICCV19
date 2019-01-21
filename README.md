@@ -78,12 +78,12 @@ We notice a few tips that can make the learning experience more comfortable :
 We even show great generalization upon triangle meshes that are less regular than the original triangle meshes found in FAUST or SCAPE dataset:
 
 
-![alt-text](https://github.com/JM-data/Unsupervised_FMnet/blob/master/Images/original_faust_example-1.png "width = 800")
+![alt-text](https://github.com/JM-data/Unsupervised_FMnet/blob/master/Images/original_faust_example-1.png "width = 600")
 
-![alt-text](https://github.com/JM-data/Unsupervised_FMnet/blob/master/Images/remesh_faust_example-1.png "width = 800")
+![alt-text](https://github.com/JM-data/Unsupervised_FMnet/blob/master/Images/remesh_faust_example-1.png "width = 600")
 
 
-![alt-text](https://github.com/JM-data/Unsupervised_FMnet/blob/master/Images/FMnet.png "width = 800")
+![alt-text](https://github.com/JM-data/Unsupervised_FMnet/blob/master/Images/FMnet.png "width = 600")
 
-![alt-text](https://github.com/JM-data/Unsupervised_FMnet/blob/master/Images/OursAll.png "width = 800")
+![alt-text](https://github.com/JM-data/Unsupervised_FMnet/blob/master/Images/OursAll.png "width = 600")
 

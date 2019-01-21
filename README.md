@@ -13,13 +13,6 @@ You can find our paper explaining more details of the implementation here : http
 
 </figure>
 
-We even show great generalization upon triangle meshes that are less regular than the original triangle meshes found in FAUST or SCAPE dataset:
-
-<p float="left">
-  <img src="https://github.com/JM-data/Unsupervised_FMnet/blob/master/Images/original_faust_example-1.png" width="400" />
-  <img src="https://github.com/JM-data/Unsupervised_FMnet/blob/master/Images/remesh_faust_example-1.png" width="400" /> 
-</p>
-
 ### Installation
 
 Install <a href="https://www.tensorflow.org/install/">TensorFlow</a>. The code is tested under TF1.6 GPU version and Python 3.6 on Ubuntu 16.04, with CUDA 9.0 and cuDNN 7. There are also some dependencies for a few Python libraries for data like `numpy`, `scipy` etc.
@@ -38,7 +31,6 @@ Visualization of functional maps at each training step is possible with tensorbo
 
         tensorboard --logdir=./Training/
 
-![alt-text-1](https://github.com/JM-data/Unsupervised_FMnet/blob/master/Images/FMnet.png "FMnet") ![alt-text-2](https://github.com/JM-data/Unsupervised_FMnet/blob/master/Images/OursAll.png "Our unsupervised approach")
 
 ### Visualization Tools
 We will include Matlab code to visualize matches and calculate their geodesic error soon.
@@ -81,3 +73,17 @@ We notice a few tips that can make the learning experience more comfortable :
     ├── ...
     └── tr_reg_098-tr_reg_099.mat
 ```
+
+
+We even show great generalization upon triangle meshes that are less regular than the original triangle meshes found in FAUST or SCAPE dataset:
+
+
+![alt-text](https://github.com/JM-data/Unsupervised_FMnet/blob/master/Images/original_faust_example-1.png "width = 800" "Orignal Triangle Mesh")
+
+![alt-text](https://github.com/JM-data/Unsupervised_FMnet/blob/master/Images/remesh_faust_example-1.png "width = 800" "Remeshed Triangle Mesh")
+
+
+![alt-text](https://github.com/JM-data/Unsupervised_FMnet/blob/master/Images/FMnet.png "width = 800" "FMnet")
+
+![alt-text](https://github.com/JM-data/Unsupervised_FMnet/blob/master/Images/OursAll.png "width = 800" "Our unsupervised approach")
+

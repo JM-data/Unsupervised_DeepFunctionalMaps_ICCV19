@@ -8,7 +8,10 @@ We therefore innovate by considering functional maps not only going from the sou
 You can find our paper explaining more details of the implementation here : https://arxiv.org/pdf/1812.03794.pdf
 
 
-![alt text](https://github.com/JM-data/Unsupervised_FMnet/blob/master/Images/Compare_SCAPE_1.png)
+<figure>
+  <img src="https://github.com/JM-data/Unsupervised_FMnet/blob/master/Images/Compare_SCAPE_1.png" alt=".." title="Texture Tranfer between two FAUST shapes" />
+  <figcaption>Texture Tranfer between two FAUST shapes</figcaption>
+</figure>
 
 We even show great generalization upon triangle meshes that are less regular than the original triangle meshes found in FAUST or SCAPE dataset: 
 

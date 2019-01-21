@@ -16,8 +16,8 @@ You can find our paper explaining more details of the implementation here : http
 We even show great generalization upon triangle meshes that are less regular than the original triangle meshes found in FAUST or SCAPE dataset:
 
 <p float="left">
-  <img src="https://github.com/JM-data/Unsupervised_FMnet/blob/master/Images/original_faust_example-1.png" width="1000" />
-  <img src="https://github.com/JM-data/Unsupervised_FMnet/blob/master/Images/remesh_faust_example-1.png" width="1000" /> 
+  <img src="https://github.com/JM-data/Unsupervised_FMnet/blob/master/Images/original_faust_example-1.png" width="500" />
+  <img src="https://github.com/JM-data/Unsupervised_FMnet/blob/master/Images/remesh_faust_example-1.png" width="500" /> 
 </p>
 
 ### Installation

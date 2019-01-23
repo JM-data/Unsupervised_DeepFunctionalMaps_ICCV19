@@ -10,15 +10,15 @@ mat_dir = './Mat_files/'
 
 t = time.time()
 for i in range(100):
-	print("Getting info for shape : " + file_name + '%.3d.off' %i)
+	print("Getting info for shape : " + file_name + '%.3d.off' % i)
 	t1 = time.time()
-	file_off = off_dir + file_name + '%.3d.off' %i
+	file_off = off_dir + file_name + '%.3d.off' % i
 	S = readOFF(file_off)
 	evals, evecs, evecs_trans = S_info(S, n_vecs)
 	params_to_save = {}
 	params_to_save['target_evals'] = evals
 	params_to_save['target_evecs'] = evecs
 	params_to_save['target_evecs_trans'] = evecs_trans
-	sio.savemat(mat_dir + file_name + '%.3d.mat' %i, params_to_save)
+	sio.savemat(mat_dir + file_name + '%.3d.mat' % i, params_to_save)
 print('---Done in %f---' % (time.time()-t))
 

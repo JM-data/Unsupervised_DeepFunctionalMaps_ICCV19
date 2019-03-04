@@ -117,7 +117,7 @@ def run_test():
             Ct = np.squeeze(Ct_est_) #Keep transposed
 
             kdt = cKDTree(np.matmul(source_evecs_, Ct))
-            target_evecs_ = input_data_source['source_evecs'][:, 0:FLAGS.num_evecs]
+            target_evecs_ = input_data_target['target_evecs'][:, 0:FLAGS.num_evecs]
 
             dist, indices = kdt.query(target_evecs_, n_jobs=-1)
             indices = indices + 1

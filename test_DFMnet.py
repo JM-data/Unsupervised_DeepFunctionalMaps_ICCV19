@@ -73,69 +73,65 @@ def run_test():
                     'matrix_solve_ls/cholesky_solve/MatrixTriangularSolve_1:0'
                                       )
 
-    for j in range(99, 80, -1):
-        input_data_target = get_test_pair_target(FLAGS.files_name + '%.3d' % j)
-        target_evecs_ = input_data_target['target_evecs'][:, 0:FLAGS.num_evecs]
-        kdt = cKDTree(target_evecs_)
+    for i in range(80, 99):
+        input_data_source = get_test_pair_source(FLAGS.files_name + '%.3d' % i)
+        source_evecs_ = input_data_source['source_evecs'][:, 0:FLAGS.num_evecs]
 
-        for i in range(80, j):
-            if i != j:
-                t = time.time()
+        for j in range(i+1, 100):
+            t = time.time()
 
-                input_data_source = get_test_pair_source(FLAGS.files_name +
-                                                         '%.3d' % i)
+            input_data_target = get_test_pair_target(FLAGS.files_name +
+                                                     '%.3d' % j)
 
-                feed_dict = {
-                    phase: True,
-                    source_shot: [input_data_source['source_shot']],
-                    target_shot: [input_data_target['target_shot']],
-                    source_evecs: [input_data_source['source_evecs'][
-                                                            :,
-                                                            0:FLAGS.num_evecs
-                                                                     ]
-                                   ],
-                    source_evecs_trans: [input_data_source[
-                                       'source_evecs_trans'
-                                                          ][
-                                                            0:FLAGS.num_evecs,
-                                                            :]
+            feed_dict = {
+                phase: True,
+                source_shot: [input_data_source['source_shot']],
+                target_shot: [input_data_target['target_shot']],
+                source_evecs: [input_data_source['source_evecs'][
+                                                        :,
+                                                        0:FLAGS.num_evecs
+                                                                 ]
+                               ],
+                source_evecs_trans: [input_data_source[
+                                    'source_evecs_trans'
+                                                      ][
+                                                        0:FLAGS.num_evecs,
+                                                        :]
                                          ],
-                    source_evals: [input_data_source[
+                source_evals: [input_data_source[
                                                 'source_evals'
                                                      ][0][0:FLAGS.num_evecs]],
-                    target_evecs: [input_data_target[
+                target_evecs: [input_data_target[
                                                 'target_evecs'
                                                      ][:, 0:FLAGS.num_evecs]],
-                    target_evecs_trans: [input_data_target[
+                target_evecs_trans: [input_data_target[
                                        'target_evecs_trans'][
                                                              0:FLAGS.num_evecs,
                                                              :]
                                          ],
-                    target_evals: [input_data_target[
+                target_evals: [input_data_target[
                                        'target_evals'][0][0:FLAGS.num_evecs]]
                              }
 
-                Ct_est_ = sess.run([Ct_est], feed_dict=feed_dict)
-                C_est_ = np.array(Ct_est_).T
-                C_est = np.squeeze(C_est_)
+            Ct_est_ = sess.run([Ct_est], feed_dict=feed_dict)
+            Ct = np.squeeze(Ct_est_) #Keep transposed
 
-                target = np.dot(C_est,
-                                input_data_source[
-                                    'source_evecs'][:, 0:FLAGS.num_evecs].T)
+            kdt = cKDTree(np.matmul(source_evecs_, Ct))
+            target_evecs_ = input_data_source['source_evecs'][:, 0:FLAGS.num_evecs]
 
-                dist, indices = kdt.query(target.T, n_jobs=-1)
-                indices = indices + 1
+            dist, indices = kdt.query(target_evecs_, n_jobs=-1)
+            indices = indices + 1
 
-                print("Computed correspondences for pair: %s, %s." % (i, j) +
-                      " Took %f seconds" % (time.time() - t))
+            print("Computed correspondences for pair: %s, %s." % (i, j) +
+                  " Took %f seconds" % (time.time() - t))
 
-                params_to_save = {}
-                params_to_save['matches'] = indices
-                params_to_save['C'] = C_est
-                # For Matlab where index start at 1
-                sio.savemat(FLAGS.matches_dir +
-                            FLAGS.files_name + '%.3d-' % i +
-                            FLAGS.files_name + '%.3d.mat' % j, params_to_save)
+            params_to_save = {}
+            params_to_save['matches'] = indices
+            #params_to_save['C'] = Ct.T
+            # For Matlab where index start at 1
+            sio.savemat(FLAGS.matches_dir +
+                        FLAGS.files_name + '%.3d-' % i +
+                        FLAGS.files_name + '%.3d.mat' % j, params_to_save)
 
 
 def main(_):

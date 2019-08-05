@@ -1,10 +1,6 @@
 ### Unsupervised Deep Functional Maps 
 An unsupervised approach to Deep Functional Maps implemented in Tensorflow 1.9.0. The goal was to obtain, and then improve upon, the same state-of-the-art results in the following paper https://arxiv.org/abs/1704.08686 by Litany et al.
 
-We were curious to see how well the neural network would behave in an unsupervised setting, in which no geodistance matrices on any shape was given nor ground-truth functional maps or matches. We change perspective by focusing on learning descriptors to improve the functional maps estimation, rather than calculating a soft-map and use the geodesic distance of the target which are high dimensional matrices, possible causes for slowing down training steps and taking up much more space than a functional map expressed in the spectral domain.
-
-We therefore innovate by considering functional maps not only going from the source shape to the target shape, but also from the target shape to the source shape. This helps introduce new penalties in the training to improve on, like two compositions between the functional maps that should yield identity. More penalties natural to functional maps' instrinsic structures are also added as : commutativity with the Laplacian to preserve isometries, orthogonality to be area-preserving and other properties explained in http://www.lix.polytechnique.fr/~maks/papers/fundescEG17.pdf, published by Dorian Nogneng and Maks Ovsjanikov in 2017.
-
 You can find our paper explaining more details of the implementation here : https://arxiv.org/pdf/1812.03794.pdf
 
 

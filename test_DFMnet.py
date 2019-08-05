@@ -12,7 +12,7 @@ flags.DEFINE_integer('num_evecs', 120,
 flags.DEFINE_integer('num_model', 5000, '')
 flags.DEFINE_string('test_shapes_dir', './Shapes/', '')
 flags.DEFINE_string('files_name', 'tr_reg_', 'name common to all the shapes')
-flags.DEFINE_string('log_dir', './Training/',
+flags.DEFINE_string('log_dir', './Testing/',
                     'directory to save targets results')
 flags.DEFINE_string('matches_dir', './Matches/',
                     'directory to matches')

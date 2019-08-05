@@ -27,7 +27,7 @@ flags.DEFINE_string('files_name', 'tr_reg_', 'name common to all the shapes')
 flags.DEFINE_string('log_dir', './Training/',
                     'directory to save models and results')
 flags.DEFINE_integer('max_train_iter', 5000, '')
-flags.DEFINE_integer('num_vertices', 6000, '')
+flags.DEFINE_integer('num_vertices', 1500, '')
 flags.DEFINE_integer('save_summaries_secs', 500, '')
 flags.DEFINE_integer('save_model_secs', 500, '')
 

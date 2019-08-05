@@ -1,7 +1,5 @@
 ### Unsupervised Deep Functional Maps 
-An unsupervised approach to Deep Functional Maps implemented in Tensorflow 1.9.0. The goal was to obtain, and then improve upon, the same state-of-the-art results in the following paper https://arxiv.org/abs/1704.08686 by Litany et al.
-
-You can find our paper explaining more details of the implementation here : https://arxiv.org/pdf/1812.03794.pdf
+An unsupervised approach to Deep Functional Maps implemented in Tensorflow 1.9.0. You can find our paper explaining more details of the implementation here : https://arxiv.org/pdf/1812.03794.pdf
 
 
 <figure>
@@ -26,10 +24,6 @@ To obtain matches after training for a given set of shapes:
 Visualization of functional maps at each training step is possible with tensorboard:
 
         tensorboard --logdir=./Training/
-
-
-### Visualization Tools
-We will include Matlab code to visualize matches and calculate their geodesic error soon.
 
 ### Prepare Your Own Data
 We also wrote Python code to calculate .mat files containing the eigenvalues and eigenvectors of a shape's Laplace-Beltrami operator, in addition to the transposed eigenvectors with mass matrix correction. To be added is the calculation of descriptors. Simply write in command line:

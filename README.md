@@ -32,11 +32,9 @@ We also wrote Python code to calculate .mat files containing the eigenvalues and
 
 ### Tips for running the code
 We notice a few tips that can make the learning experience more comfortable :
-* Subsampling helps to gain speed, since less vertices are used, but experience shows using more vertices is benificial.
+* Subsampling helps to gain speed, since less vertices are used
 * Some variables must be changed depending on the name of the shapes (tr_reg_ for FAUST for example)
 * Matches between test shapes must be specified in `test_DFMnet.py`. We prefered incorparating this in the code rather than create a .txt file.
-* 4 parameters are used in front of each penalty, which can be be changed according to the data. For example, if the data is mostly non-isometric, then lowering the weight on the functional map's Orthogonality penalty (E2 in `loss_DFMnet.py`) might yield better results. Likewise, experience shows that when very similar shapes are used in training, a lower penalty on the Commutativity with the Laplacian operator (E3 in `loss_DFMnet.py`) might be advised.
-* If RAM permits, increasing the percentage of descriptors randomly chosen at each training step can yield better results. However, we were satisfied by only chosing 20%, or less, first for speed reasons but second because the randomness in this choice reminded us of a pooling step. This could add robustness to our model.
 * If you have an OOM error with tensorflow, reduce the batch_size and/or number of vertices chosen on the shapes and/or use less descriptors.
 * Be sure to check your directories and make it similar with the code! Think about the shape names, shape directory, training directory, are the shapes numbered on 3 digits or just two (i.e. Shape1 and not Shape01) etc...
 

@@ -12,7 +12,7 @@ FLAGS = flags.FLAGS
 
 # Training parameterss
 flags.DEFINE_float('learning_rate', 1e-3, 'initial learning rate.')
-flags.DEFINE_integer('batch_size', 16, 'batch size.')
+flags.DEFINE_integer('batch_size', 4, 'batch size.')
 
 # Architecture parameters
 flags.DEFINE_integer('num_layers', 7, 'network depth')
@@ -32,7 +32,7 @@ flags.DEFINE_integer('save_summaries_secs', 500, '')
 flags.DEFINE_integer('save_model_secs', 500, '')
 
 # Globals
-train_subjects = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+train_subjects = [0]
 flags.DEFINE_integer('num_poses_per_subject_total', 10, '')
 
 
